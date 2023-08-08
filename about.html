@@ -30,8 +30,8 @@
     </style>
 </head>
 <body class="bg-gray-100">
-    <header class="bg-white shadow-md">
-        <nav class="container mx-auto flex flex-col md:flex-row md:items-center md:justify-between py-4">
+    <header class=" ">
+        <nav class="bg-white shadow-md container mx-auto flex flex-col md:flex-row md:items-center md:justify-between py-4">
             <div class="flex justify-around items-center">
             <div class="flex items-center md:pl-20">
                 <img src="images/logo-removebg-preview.png" alt="Logo" class="h-10">
@@ -80,32 +80,172 @@
                 <button class="focus:outline-none text-white text-xl font-bold border-green-600 border-2 bg-green-500 hover:bg-green-600 px-4 py-2 rounded-full">Hire Me</button>
             </div></div>
         </nav>
+        <div class="flex flex-wrap justify-center mt-4 space-x-4">
+            <a href="#education">
+            <button class="btn btn-primary btn-lg bg-gradient-to-r from-green-400 to-blue-500">
+              <i class="fas fa-graduation-cap mr-2"></i> Education
+            </button></a>
+            <a href="#skills">
+            <button class="btn btn-primary btn-lg bg-gradient-to-r from-yellow-400 to-orange-500">
+              <i class="fas fa-tools mr-2"></i> Skills
+            </button></a>
+            <button class="btn btn-primary btn-lg bg-gradient-to-r from-purple-400 to-pink-500">
+              <i class="fas fa-code mr-2"></i> Programming Languages
+            </button>
+            <button class="btn btn-primary btn-lg bg-gradient-to-r from-blue-400 to-indigo-500">
+              <i class="fas fa-hiking mr-2"></i> Hobbies
+            </button>
+          </div>
+          
+          
+          
         </header>
         <main>
-            <section class="py-16 bg-white">
-                <div class="container mx-auto">
-                    <h2 class="text-3xl font-extrabold mb-8">About Me</h2>
-                    <!-- Your existing about content goes here -->
-                </div>
-            </section>
-        
-            <section class="py-16 bg-gray-100">
-                <div class="container mx-auto">
-                    <h2 class="text-3xl font-extrabold mb-8">Education</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <!-- Education details here (e.g., university, degree, dates) -->
+            <section class="bg-gradient-to-b from-gray-100 via-stone-200 to-slate-300 text-gray-600 body-font">
+                <div class="container px-5 py-24 mx-auto flex flex-col">
+                  <div class="lg:w-4/6 mx-auto">
+                    <div class="rounded-lg h-96 overflow-hidden flex items-center justify-center bg-[url('images/Presentation.JPEG')] bg-center bg-cover bg-no-repeat">
+                        
+                    </div>                    
+                    <div class="flex flex-col sm:flex-row mt-10">
+                      <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
+                        <div class="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400">
+                          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
+                            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                          </svg>
+                        </div>
+                        <div class="flex flex-col items-center text-center justify-center">
+                          <h2 class="font-medium title-font mt-4 text-gray-900 text-lg">Mostaque Ahammed Naim</h2>
+                          <div class="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div>
+                          <p class="text-base">I have been studying CSE from AIUB for more than three years.
+                            Throughout the journey, I have learned about the world of programming.
+                            As I am at the end edge of the journey, I want to start applying my knowledge
+                            in the real world.</p>
+                        </div>
+                      </div>
+                      <div class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
+                        <p class="leading-relaxed text-lg mb-4">I am a passionate and dedicated Computer Science student currently pursuing my degree at AIUB. Over the past few years, I have gained valuable knowledge and skills in programming, software development, and problem-solving.
+                            I am enthusiastic about learning new technologies and frameworks, and I enjoy collaborating with others to create innovative and impactful projects. My goal is to contribute my skills and expertise to real-world projects that make a positive difference. <br>
+                        If I look back I have gained a lot of skills in the past few years. I have applied a number of programming languages in my projects and got great feedbacks from my instructors. I have improved my by gaining social skills as well. I have more confident and enthusiastic than ever and ready to land on the world of programming and technologies.</p>   
+
+                        <button class="leading-relaxed text-xl font-semibold mb-4 btn" onclick="my_modal_1.showModal()">Lets Start Collaborating!</button>
+                            <dialog id="my_modal_1" class="modal">
+                            <form method="dialog" class="modal-box flex flex-col justify-center">
+                                <p class="py-4">Click Contact Me to reach me through email (mostaque.naim.42140@gmail.com)</p>
+                                <div class="flex gap-4 modal-action">
+                                <div>
+                                    <button class="btn btn-primary"><a href="mailto:mostaque.naim.42140@gmail.com">Contact me</a></button>
+                                </div>
+                                <div>
+                                <!-- if there is a button in form, it will close the modal -->
+                                <button class="btn">Close</button>
+                                </div>
+                            </div>
+                            </form>
+                            </dialog>
+                        </a>
+                      </div>
                     </div>
+                  </div>
                 </div>
-            </section>
+              </section>
         
-            <section class="py-16 bg-white">
-                <div class="container mx-auto">
-                    <h2 class="text-3xl font-extrabold mb-8">Skills</h2>
-                    <div class="flex flex-wrap gap-4">
-                        <!-- Skills icons or badges here -->
+              <section id="education" class="text-gray-600 body-font">
+                <div class="container px-5 py-24 mx-auto">
+                  <div class="text-center mb-20">
+                    <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">Education</h1>
+                    <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Here's a summary of my educational journey.</p>
+                    <div class="flex mt-6 justify-center">
+                      <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
                     </div>
+                  </div>
+                  <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
+                    <!-- First Institution -->
+                    <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+                      <div class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
+                        <img src="images/American_International_University-Bangladesh_Monogram.svg.png" alt="">
+                      </div>
+                      <div class="flex-grow">
+                        <h2 class="text-gray-900 text-lg title-font font-medium mb-3">American International University - Bangladesh</h2>
+                        <p class="leading-relaxed text-base">Bachelor in Science in Computer Science and Engineering<br>2020-current<br>CGPA: 3.93</p>
+                        <a href="https://www.aiub.edu/" target="_blank" class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                              <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                          </a>
+                    </div>
+                    </div>
+                    <!-- Second Institution -->
+                    <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+                      <div class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
+                        <img src="images/rouf logo.png" alt="">
+                    </div>
+                      <div class="flex-grow">
+                        <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Birsreshtha Munshi Abdur Rouf Public College</h2>
+                        <p class="leading-relaxed text-base">HSC<br>2017-2019<br>GPA: 4.33</p>
+                        <a href="https://www.abdurroufcollege.ac.bd/" target="_blank" class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                              <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                          </a>
+                    </div>
+                    </div>
+                    <!-- Third Institution -->
+                    <div class="p-4 md:w-1/3 flex flex-col text-center items-center">
+                      <div class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-5 flex-shrink-0">
+                        <img src="images/Government_Laboratory_High_School_Monogram.png"  alt="">
+                    </div>
+                      <div class="flex-grow">
+                        <h2 class="text-gray-900 text-lg title-font font-medium mb-3">Government Laboratory High School</h2>
+                        <p class="leading-relaxed text-base">SSC<br>2007-2017<br>GPA 5.00</p>
+                        <a href="http://www.glabdhaka.edu.bd/" target="_blank" class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                              <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                          </a>
+                    </div>
+                    </div>
+                  </div>
                 </div>
-            </section>
+              </section>
+              
+        
+              <section id="skills" class="bg-gradient-to-b from-gray-100 via-stone-200 to-slate-300 text-gray-600 body-font">
+                <div class="container px-5 py-24 mx-auto">
+                  <div class="text-center mb-20">
+                    <h1 class="sm:text-3xl text-2xl font-medium text-center title-font text-gray-900 mb-4">Skills</h1>
+                    <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">A collection of skills that contribute to my journey.</p>
+                  </div>
+                  <div class="flex flex-wrap justify-around">
+                    <div class="p-4 lg:w-1/2 w-full">
+                      <h2 class="font-medium title-font tracking-widest text-gray-900 mb-4 text-sm text-center sm:text-left">Programming Skills</h2>
+                      <ul class="list-none ml-6 space-y-2.5">
+                        <li><i class="fas fa-lightbulb text-indigo-500 mr-2"></i> Problem Solving</li>
+                        <li><i class="fas fa-code text-indigo-500 mr-2"></i> Object-Oriented Programming</li>
+                        <li><i class="fas fa-laptop-code text-indigo-500 mr-2"></i> Software Development</li>
+                        <li><i class="fas fa-code text-indigo-500 mr-2"></i> Frontend Development</li>
+                        <li><i class="fas fa-code text-indigo-500 mr-2"></i> Backend Development</li>
+                        <li><i class="fas fa-code text-indigo-500 mr-2"></i> Web Development</li>
+                      </ul>
+                    </div>
+                    <div class="p-4 lg:w-1/2 w-full">
+                      <h2 class="font-medium title-font tracking-widest text-gray-900 mb-4 text-sm text-center sm:text-left">Soft Skills</h2>
+                      <ul class="list-none ml-6 space-y-2.5">
+                        <li><i class="fas fa-laptop text-indigo-500 mr-2"></i> Quick Learning</li>
+                        <li><i class="fas fa-users text-indigo-500 mr-2"></i> Teamwork</li>
+                        <li><i class="fas fa-user-tie text-indigo-500 mr-2"></i> Leadership</li>
+                        <li><i class="fas fa-comments text-indigo-500 mr-2"></i> Communication</li>
+                        <li><i class="fas fa-rocket text-indigo-500 mr-2"></i> Adaptability</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              
+              
+              
+              
         
             <section class="py-16 bg-gray-100">
                 <div class="container mx-auto">
