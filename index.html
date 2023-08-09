@@ -27,10 +27,17 @@
         .font-lato {
             font-family: 'Lato', sans-serif;
         }
+        .gradient-text {
+            display: inline;
+            background-clip: text;
+            background-image: linear-gradient(to right, #FF8A00, #E52E71); /* Replace these colors with your desired gradient */
+            -webkit-background-clip: text;
+            color: transparent;
+        }
     </style>
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gray-100 font-lato">
     <header class="bg-white shadow-md">
         <nav class="container mx-auto flex flex-col md:flex-row md:items-center md:justify-between py-4">
             <div class="flex justify-around items-center">
@@ -159,7 +166,14 @@
             <div
                 class="relative mx-auto border-gray-800 bg-gray-800 border-[8px] rounded-t-xl max-w-[301px] md:max-w-[512px]">
                 <div class="flex flex-col items-center rounded-lg overflow-hidden bg-white dark:bg-gray-800 p-4 md:p-6">
-                    <h2 class="text-3xl font-extrabold mb-4 text-gray-800 dark:text-white">About Me</h2>
+                    <div class="flex gap-3 ">
+                        <h2 class="text-3xl font-extrabold mb-4 text-gray-800 dark:text-white">About Me</h2>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="white" class="h-8 w-8">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+                        </svg>
+                    </div>
                     <p class="text-gray-800 dark:text-gray-200 max-w-lg mx-auto">I am a passionate and dedicated
                         Computer Science student
                         currently pursuing my degree at AIUB.
@@ -186,7 +200,18 @@
         <!-- education  -->
         <section
             class="flex flex-col items-center mb-10 shadow-md bg-gradient-to-b from-zinc-50 via-blue-50 to-gray-50 p-5">
-            <h2 class="text-3xl font-extrabold mb-4 text-gray-800 dark:text-black">Education</h2>
+            <div class="flex">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                    class="mr-2 h-8 w-10 bg-blue-500">
+                    <path
+                        d="M11.7 2.805a.75.75 0 01.6 0A60.65 60.65 0 0122.83 8.72a.75.75 0 01-.231 1.337 49.949 49.949 0 00-9.902 3.912l-.003.002-.34.18a.75.75 0 01-.707 0A50.009 50.009 0 007.5 12.174v-.224c0-.131.067-.248.172-.311a54.614 54.614 0 014.653-2.52.75.75 0 00-.65-1.352 56.129 56.129 0 00-4.78 2.589 1.858 1.858 0 00-.859 1.228 49.803 49.803 0 00-4.634-1.527.75.75 0 01-.231-1.337A60.653 60.653 0 0111.7 2.805z" />
+                    <path
+                        d="M13.06 15.473a48.45 48.45 0 017.666-3.282c.134 1.414.22 2.843.255 4.285a.75.75 0 01-.46.71 47.878 47.878 0 00-8.105 4.342.75.75 0 01-.832 0 47.877 47.877 0 00-8.104-4.342.75.75 0 01-.461-.71c.035-1.442.121-2.87.255-4.286A48.4 48.4 0 016 13.18v1.27a1.5 1.5 0 00-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.661a6.729 6.729 0 00.551-1.608 1.5 1.5 0 00.14-2.67v-.645a48.549 48.549 0 013.44 1.668 2.25 2.25 0 002.12 0z" />
+                    <path
+                        d="M4.462 19.462c.42-.419.753-.89 1-1.394.453.213.902.434 1.347.661a6.743 6.743 0 01-1.286 1.794.75.75 0 11-1.06-1.06z" />
+                </svg>
+                <h2 class="text-3xl font-extrabold mb-4 text-gray-800 dark:text-black">Education</h2>
+            </div>
             <ol
                 class=" border-neutral-300 dark:border-neutral-500 md:flex md:justify-center md:gap-16 md:border-l-0 md:border-t">
                 <!--First item-->
@@ -203,7 +228,7 @@
                         <h4 class="mb-1.5 text-xl font-semibold">SSC</h4>
                         <p class="mb-3 text-slate-500 ">
                             Government Laboratory High School <br>
-                            <span class="font-bold">GPA 5.00</span>
+                            
                         </p>
                     </div>
                 </li>
@@ -222,7 +247,7 @@
                         <h4 class="mb-1.5 text-xl font-semibold">HSC</h4>
                         <p class="mb-3 text-slate-500 ">
                             Birsreshtha Munshi Abdur Rouf Public College <br>
-                            <span class="font-bold">GPA 4.33</span>
+                            <!-- <span class="font-bold">GPA 4.33</span> -->
                         </p>
                     </div>
                 </li>
@@ -241,7 +266,7 @@
                         <h4 class="mb-1.5 text-xl font-semibold">BSc in CSE</h4>
                         <p class="mb-3 text-slate-500 ">
                             American International University - Bangladesh <br>
-                            <span class="font-bold">CGPA 3.93</span>
+                            <!-- <span class="font-bold">CGPA 3.93</span> -->
                         </p>
                     </div>
                 </li>
@@ -256,116 +281,149 @@
         </section>
 
         <!-- projects  -->
-        <section class="flex flex-col gap-10 m-10 p-5 items-center">
+        <section class="flex flex-col gap-10 m-10 p-5 items-center text-center bg-gradient-to-b from-blue-50 via-blue-100 to-zinc-300">
             <div>
-            <h2 class="text-3xl font-extrabold mb-4 text-gray-800 dark:text-black">Project</h2>
-            <p>Some of the projects I have done so far</p>
+                <div class="flex text-center h-10 gap-1">
+                <img src="images/projects.png" alt="">
+                <h2 class="text-3xl font-extrabold mb-4 text-gray-800 dark:text-black">Projects</h2>
+                </div>
+                <p>Some of the projects I have done so far</p>
             </div>
-            <div class="flex gap-10">
-            <div
-                class="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
-                <div class="relative overflow-hidden bg-cover bg-no-repeat" data-te-ripple-init
-                    data-te-ripple-color="light">
-                    <img class="rounded-t-lg" src="https://tecdn.b-cdn.net/img/new/standard/nature/186.jpg" alt="" />
-                    <a href="#!">
-                        <div
-                            class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100">
-                        </div>
-                    </a>
+            <div class="flex md:grid md:grid-cols-2 lg:flex flex-col md:flex-row gap-10">
+                <div
+                    class="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+                    <div class="h-56 relative overflow-hidden bg-[url('images/sellhobe.jpeg')] bg-cover bg-no-repeat bg-center" data-te-ripple-init
+                        data-te-ripple-color="light">
+                        <img class="rounded-t-lg" src=""
+                            alt="" />
+                        <a href="#!">
+                            <div
+                                class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <h5 
+                        class="font-extrabold text-2xl gradient-text">
+                            Sellhobe.com
+                        </h5>
+                        <p class="mb-4 text-base text-neutral-400">
+                            <span class="font-semibold text-neutral-300">  This project was done with PHP, HTML and CSS.</span> <br>
+                             The purpose of this project was to make buy, sell, rent easier for people. This is a classified system project.
+                        </p>
+                        <button type="button"
+                            class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_9px_15px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                            data-te-ripple-init data-te-ripple-color="light">
+                            <a href="https://github.com/mostaquenaim/Classified-system-w-WebTech-Buy-sell-website-/" target="_blank">
+                               Check out 
+                            </a>
+                            
+                        </button>
+                    </div>
                 </div>
-                <div class="p-6">
-                    <h5 class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
-                        Card title
-                    </h5>
-                    <p class="mb-4 text-base text-neutral-600 dark:text-neutral-200">
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
-                    </p>
-                    <button type="button"
-                        class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
-                        data-te-ripple-init data-te-ripple-color="light">
-                        Button
-                    </button>
+                <div
+                    class="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+                    <div class="h-56 relative overflow-hidden bg-[url('images/cryptobg.jpg')] bg-cover bg-no-repeat bg-center" data-te-ripple-init
+                        data-te-ripple-color="light">
+                        <img class="rounded-t-lg" src=""
+                            alt="" />
+                        <a href="#!">
+                            <div
+                                class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <h5 
+                        class="font-extrabold text-2xl gradient-text">
+                            Digital Currency Trader
+                        </h5>
+                        <p class="mb-4 text-base text-neutral-400">
+                            <span class="font-semibold text-neutral-300">  This project was done with NestJS, NestJS, HTML, Tailwind CSS, React and PostGreSQL.</span> <br>
+                             The purpose of this project was to make cryptocurrency buy/ sell/ transfer easier. Also, it lets people know more and keep updated with the cryptocurrency related news.
+                        </p>
+                        <button type="button"
+                            class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_9px_15px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                            data-te-ripple-init data-te-ripple-color="light">
+                            <a href="https://github.com/mostaquenaim/Classified-system-w-WebTech-Buy-sell-website-/" target="_blank">
+                               Check out 
+                            </a>
+                            
+                        </button>
+                    </div>
                 </div>
+                <div
+                    class="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+                    <div class="h-56 relative overflow-hidden bg-[url('images/sellhobe.jpeg')] bg-cover bg-no-repeat bg-center" data-te-ripple-init
+                        data-te-ripple-color="light">
+                        <img class="rounded-t-lg" src=""
+                            alt="" />
+                        <a href="#!">
+                            <div
+                                class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <h5 
+                        class="font-extrabold text-2xl gradient-text">
+                            Sellhobe.com
+                        </h5>
+                        <p class="mb-4 text-base text-neutral-400">
+                            <span class="font-semibold text-neutral-300">  This project was done with PHP, HTML and CSS.</span>
+                             The purpose of this project was to make buy, sell, rent easier for people. This is a classified system project.
+                        </p>
+                        <button type="button"
+                            class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_9px_15px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                            data-te-ripple-init data-te-ripple-color="light">
+                            <a href="https://github.com/mostaquenaim/Classified-system-w-WebTech-Buy-sell-website-/" target="_blank">
+                               Check out 
+                            </a>
+                            
+                        </button>
+                    </div>
+                </div>
+                <div
+                    class="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
+                    <div class="h-56 relative overflow-hidden bg-[url('images/sellhobe.jpeg')] bg-cover bg-no-repeat bg-center" data-te-ripple-init
+                        data-te-ripple-color="light">
+                        <img class="rounded-t-lg" src=""
+                            alt="" />
+                        <a href="#!">
+                            <div
+                                class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="p-6">
+                        <h5 
+                        class="font-extrabold text-2xl gradient-text">
+                            Sellhobe.com
+                        </h5>
+                        <p class="mb-4 text-base text-neutral-400">
+                            <span class="font-semibold text-neutral-300">  This project was done with PHP, HTML and CSS.</span>
+                             The purpose of this project was to make buy, sell, rent easier for people. This is a classified system project.
+                        </p>
+                        <button type="button"
+                            class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_9px_15px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                            data-te-ripple-init data-te-ripple-color="light">
+                            <a href="https://github.com/mostaquenaim/Classified-system-w-WebTech-Buy-sell-website-/" target="_blank">
+                               Check out 
+                            </a>
+                            
+                        </button>
+                    </div>
+                </div>
+                
+                
+                
             </div>
-            <div
-                class="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
-                <div class="relative overflow-hidden bg-cover bg-no-repeat" data-te-ripple-init
-                    data-te-ripple-color="light">
-                    <img class="rounded-t-lg" src="https://tecdn.b-cdn.net/img/new/standard/nature/186.jpg" alt="" />
-                    <a href="#!">
-                        <div
-                            class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100">
-                        </div>
-                    </a>
-                </div>
-                <div class="p-6">
-                    <h5 class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
-                        Card title
-                    </h5>
-                    <p class="mb-4 text-base text-neutral-600 dark:text-neutral-200">
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
-                    </p>
-                    <button type="button"
-                        class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
-                        data-te-ripple-init data-te-ripple-color="light">
-                        Button
-                    </button>
-                </div>
-            </div>
-            <div
-                class="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
-                <div class="relative overflow-hidden bg-cover bg-no-repeat" data-te-ripple-init
-                    data-te-ripple-color="light">
-                    <img class="rounded-t-lg" src="https://tecdn.b-cdn.net/img/new/standard/nature/186.jpg" alt="" />
-                    <a href="#!">
-                        <div
-                            class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100">
-                        </div>
-                    </a>
-                </div>
-                <div class="p-6">
-                    <h5 class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
-                        Card title
-                    </h5>
-                    <p class="mb-4 text-base text-neutral-600 dark:text-neutral-200">
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
-                    </p>
-                    <button type="button"
-                        class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
-                        data-te-ripple-init data-te-ripple-color="light">
-                        Button
-                    </button>
-                </div>
-            </div>
-            <div
-                class="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
-                <div class="relative overflow-hidden bg-cover bg-no-repeat" data-te-ripple-init
-                    data-te-ripple-color="light">
-                    <img class="rounded-t-lg" src="https://tecdn.b-cdn.net/img/new/standard/nature/186.jpg" alt="" />
-                    <a href="#!">
-                        <div
-                            class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100">
-                        </div>
-                    </a>
-                </div>
-                <div class="p-6">
-                    <h5 class="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
-                        Card title
-                    </h5>
-                    <p class="mb-4 text-base text-neutral-600 dark:text-neutral-200">
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
-                    </p>
-                    <button type="button"
-                        class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
-                        data-te-ripple-init data-te-ripple-color="light">
-                        Button
-                    </button>
-                </div>
-            </div>
+            <div class="my-6">
+                <a href="projects.html"
+                    class="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-2 px-4 rounded-full text-sm font-semibold inline-flex items-center hover:from-blue-600 hover:to-purple-700">
+                    <span class="mr-2">More Projects</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
         </section>
         <!-- achievements  -->

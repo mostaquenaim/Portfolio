@@ -27,9 +27,16 @@
         .font-lato {
             font-family: 'Lato', sans-serif;
         }
+        .gradient-text {
+            display: inline;
+            background-clip: text;
+            background-image: linear-gradient(to right, #FF8A00, #E52E71); /* Replace these colors with your desired gradient */
+            -webkit-background-clip: text;
+            color: transparent;
+        }
     </style>
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-100 font-lato">
     <header class="bg-white shadow-md">
         <nav class="container mx-auto flex flex-col md:flex-row md:items-center md:justify-between py-4">
             <div class="flex justify-around items-center">
