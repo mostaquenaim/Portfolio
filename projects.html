@@ -37,58 +37,71 @@
     </style>
 </head>
 <body class="bg-gray-100 font-lato">
-    <header class="bg-white shadow-md">
-        <nav class="container mx-auto flex flex-col md:flex-row md:items-center md:justify-between py-4">
+    <header class="bg-white shadow-md mb-40 md:mb-28">
+        <nav class="z-30 bg-white fixed top-0 container mx-auto flex flex-col md:flex-row md:items-center md:justify-between py-4">
             <div class="flex justify-around items-center">
                 <div class="flex items-center md:pl-20">
                     <a href="index.html">
                         <img src="images/logo-removebg-preview.png" alt="Logo" class="h-20">
-                </a></div>
-
-            <!-- hidden social medias -->
-            <div class="md:hidden flex gap-4">
-                <a href="https://www.linkedin.com/in/mostaque-naim-b114571b1/" target="_blank" class="text-gray-600 hover:text-gray-800"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/mostaquenaim" target="_blank" class="text-gray-600 hover:text-gray-800"><i class="fab fa-github"></i></a>
-                <a href="https://codeforces.com/profile/mostaquexox" target="_blank" class="text-gray-600 hover:text-gray-800"><i class="fas fa-code"></i></a>
-              </div>
-
-
-            <!-- Hamburger icon for small screens -->
-            
-
-            <div class="md:hidden dropdown">
-                <label tabindex="0" class="btn btn-ghost btn-circle">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
-                </label>
-                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 right-1 shadow bg-base-100 rounded-box w-52">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="about.html">About</a></li>
-                  <li><a href="projects.html">Projects</a></li>
-                  <li><a href="achievements.html">Achievements</a></li>
-                </ul>
-              </div>
-        </div>
+                    </a>
+                </div>
+    
+                <!-- hidden social medias -->
+                <div class="md:hidden flex gap-4">
+                    <a href="https://www.linkedin.com/in/mostaque-naim-b114571b1/" target="_blank"
+                        class="text-gray-600 hover:text-gray-800"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/mostaquenaim" target="_blank"
+                        class="text-gray-600 hover:text-gray-800"><i class="fab fa-github"></i></a>
+                    <a href="https://codeforces.com/profile/mostaquexox" target="_blank"
+                        class="text-gray-600 hover:text-gray-800"><i class="fas fa-code"></i></a>
+                </div>
+    
+    
+                <!-- Hamburger icon for small screens -->
+    
+    
+                <div class="md:hidden dropdown">
+                    <label tabindex="0" class="btn btn-ghost btn-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h7" />
+                        </svg>
+                    </label>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 right-1 shadow bg-base-100 rounded-box w-52">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="achievements.html">Achievements</a></li>
+                    </ul>
+                </div>
+            </div>
             <!-- Navigation links -->
             <div class="hidden md:flex space-x-4" id="navLinks">
-                <a href="index.html" class="hover:text-clifford">Home</a>
+                <a href="index.html" class="hover:text-clifford ">Home</a>
                 <a href="about.html" class="hover:text-clifford">About</a>
                 <a href="projects.html" class="hover:text-clifford md:text-green-500">Projects</a>
                 <a href="achievements.html" class="hover:text-clifford">Achievements</a>
             </div>
-
+    
             <!-- Hire Me button -->
             <div class="flex flex-col md:flex-row gap-3 md:space-x-4 md:pr-20 text-center items-center">
                 <div class="hidden md:flex gap-4 justify-center">
-                <a href="https://www.linkedin.com/in/mostaque-naim-b114571b1/" target="_blank" class="text-gray-600 hover:text-gray-800"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/mostaquenaim" target="_blank" class="text-gray-600 hover:text-gray-800"><i class="fab fa-github"></i></a>
-                <a href="https://codeforces.com/profile/mostaquexox" target="_blank" class="text-gray-600 hover:text-gray-800"><i class="fas fa-code"></i></a>
-              </div>
-              <div class="flex ">
-                <a href="mailto:mostaque.naim.42140@gmail.com" target="_blank">
+                    <a href="https://www.linkedin.com/in/mostaque-naim-b114571b1/" target="_blank"
+                        class="text-gray-600 hover:text-gray-800"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/mostaquenaim" target="_blank"
+                        class="text-gray-600 hover:text-gray-800"><i class="fab fa-github"></i></a>
+                    <a href="https://codeforces.com/profile/mostaquexox" target="_blank"
+                        class="text-gray-600 hover:text-gray-800"><i class="fas fa-code"></i></a>
+                </div>
+                <div class="flex ">
+                    <a href="mailto:mostaque.naim.42140@gmail.com" target="_blank">
                     <button
                         class="focus:outline-none text-white text-xl font-bold border-green-600 border-2 bg-green-500 hover:bg-green-600 px-4 py-2 rounded-full">Hire
                         Me</button></a>
-                                </div></div>
+                </div>
+            </div>
         </nav>
         </header>
         <main>
