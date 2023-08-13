@@ -209,7 +209,28 @@
                 </a>
             </div>
             <!-- virtual shuttle  -->
-            
+            <div
+            onclick="my_modal_1.showModal()" class="cursor-pointer relative group overflow-hidden rounded-lg border border-gray-300 bg-white transition-transform transform hover:scale-105 hover:z-10">
+                    <img src="images/gyro.jpg" alt="Image 1" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity"></div>
+                    <div
+                        class="absolute inset-0 flex flex-col items-center text-center justify-center opacity-0 group-hover:opacity-100 transition-opacity p-14 md:p-20">
+                        <h2 class="text-white text-lg font-semibold mb-2">Virtual Shuttle</h2>
+                        <p class="text-white text-sm"> Click to see detailed video
+                        </p>
+                    </div>
+            </div>
+            <dialog id="my_modal_1" class="modal">
+                <form method="dialog" class="modal-box">
+                    <video id="modalVideo" width="full" height="240" controls>
+                        <source src="images/The Virtual Shuttle! (2).mp4" type="video/mp4">
+                    </video>
+                    <div class="modal-action">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button id="closeButton" class="btn">Close</button>
+                    </div>
+                </form>
+            </dialog>
             
             <script>
                 const modal = document.getElementById('my_modal_1');
