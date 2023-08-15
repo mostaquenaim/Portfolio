@@ -27,10 +27,12 @@
         .font-lato {
             font-family: 'Lato', sans-serif;
         }
+
         .gradient-text {
             display: inline;
             background-clip: text;
-            background-image: linear-gradient(to right, #FF8A00, #E52E71); /* Replace these colors with your desired gradient */
+            background-image: linear-gradient(to right, #FF8A00, #E52E71);
+            /* Replace these colors with your desired gradient */
             -webkit-background-clip: text;
             color: transparent;
         }
@@ -39,7 +41,8 @@
 
 <body class="bg-gray-100 font-lato">
     <header class="relative bg-white shadow-md">
-        <nav class="z-30 bg-white fixed top-0 container mx-auto flex flex-col md:flex-row md:items-center md:justify-between py-4">
+        <nav
+            class="z-30 bg-white fixed top-0 container mx-auto flex flex-col md:flex-row md:items-center md:justify-between py-4">
             <div class="flex justify-around items-center">
                 <div class="flex items-center md:pl-20">
                     <a href="index.html">
@@ -98,9 +101,9 @@
                 </div>
                 <div class="flex ">
                     <a href="mailto:mostaque.naim.42140@gmail.com" target="_blank">
-                    <button
-                        class="focus:outline-none text-white text-xl font-bold border-green-600 border-2 bg-green-500 hover:bg-green-600 px-4 py-2 rounded-full">Hire
-                        Me</button></a>
+                        <button
+                            class="focus:outline-none text-white text-xl font-bold border-green-600 border-2 bg-green-500 hover:bg-green-600 px-4 py-2 rounded-full">Hire
+                            Me</button></a>
                 </div>
             </div>
         </nav>
@@ -112,49 +115,69 @@
             <!-- <img class="absolute opacity-5 h-[600px] md:h-98" src="images/banner.jpg" alt=""> -->
             <!-- banner content  -->
             <div class="flex flex-col md:flex-row justify-around items-center">
-            <div class="absolute left-0">
-                <img src="images/developer.png" class="max-h-96" alt="">
-            </div>
-            <div
-                class="flex w-52 h-52 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 items-center justify-center">
-                <div class="w-48 h-48 rounded-full overflow-hidden">
-                    <img src="images/DP short final.jpg" alt="Profile Picture" class="w-full h-full object-cover">
+                <div class="absolute left-0">
+                    <img src="images/developer.png" class="max-h-96" alt="">
                 </div>
-            </div>
-            <div class="mx-20">
-                <div class="font-extrabold text-xl">
-                    Hi 👋, <br>
-                    My name is <br>
-                    <span class="text-3xl" style="background: var(--gradient-heading, linear-gradient(90deg, #13B0F5 2.60%, #E70FAA 100%));
+            
+
+                
+                <div
+                    class="flex w-52 h-52 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 items-center justify-center">
+                    <div class="w-48 h-48 rounded-full overflow-hidden">
+                        <img src="images/DP short final.jpg" alt="Profile Picture" class="w-full h-full object-cover cursor-pointer" onclick="proPic.showModal()">
+                    </div>
+                </div>
+                <!-- Open the modal using ID.showModal() method -->
+                <dialog id="proPic" class="modal">
+                    <form method="dialog" class="modal-box relative p-0 m-0 h-full overflow-hidden">
+                        <div class="modal-action absolute top-0 right-0 mt-2 mr-2">
+                            <button class="border-none">
+                                <i class="fab fa-x"></i>
+                            </button>
+                            <!-- if there is a button in form, it will close the modal -->
+                        </div>
+                                
+                        <img src="images/DP.jpg" alt="">
+                    </form>
+                </dialog>
+                
+                
+
+                <div class="mx-20">
+                    <div class="font-extrabold text-xl">
+                        Hi 👋, <br>
+                        My name is <br>
+                        <span class="text-3xl" style="background: var(--gradient-heading, linear-gradient(90deg, #13B0F5 2.60%, #E70FAA 100%));
                             background-clip: text;
                             -webkit-background-clip: text;
                             -webkit-text-fill-color: transparent;">
-                        Mostaque Ahammed Naim
-                    </span>
-                </div>
-                <div class="text-sm font-thin mt-4">
-                    <p>
-                        I have been studying CSE from <a class="font-semibold hover:bg-zinc-300"
-                            href="https://www.aiub.edu/" target="_blank">AIUB</a> for more than three years. <br>
-                        Throughout the journey, I have learned about the world of programming. <br>
-                        As I am at the end edge of the journey, I want to start applying my knowledge <br> in the real
-                        world.
-                    </p>
-                </div>
-                <div class="mt-6">
-                    <a href="https://github.com/mostaquenaim/test/blob/main/Mostaque's%20Resume%20(1).pdf"
-                        target="_blank"
-                        class="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white py-2 px-4 rounded-full text-sm font-semibold inline-flex items-center mr-4">
-                        <i class="fas fa-file-pdf mr-1"></i> Download CV
-                    </a>
-                    <a href="mailto:mostaque.naim.42140@gmail.com" target="_blank"
-                        class="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white py-2 px-4 rounded-full text-sm font-semibold inline-flex items-center">
-                        <i class="fas fa-envelope mr-1"></i> Contact Me
-                    </a>
-                </div>
+                            Mostaque Ahammed Naim
+                        </span>
+                    </div>
+                    <div class="text-sm font-thin mt-4">
+                        <p>
+                            I have been studying CSE from <a class="font-semibold hover:bg-zinc-300"
+                                href="https://www.aiub.edu/" target="_blank">AIUB</a> for more than three years. <br>
+                            Throughout the journey, I have learned about the world of programming. <br>
+                            As I am at the end edge of the journey, I want to start applying my knowledge <br> in the
+                            real
+                            world.
+                        </p>
+                    </div>
+                    <div class="mt-6">
+                        <a href="https://github.com/mostaquenaim/test/blob/main/Mostaque's%20Resume%20(1).pdf"
+                            target="_blank"
+                            class="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white py-2 px-4 rounded-full text-sm font-semibold inline-flex items-center mr-4">
+                            <i class="fas fa-file-pdf mr-1"></i> Download CV
+                        </a>
+                        <a href="mailto:mostaque.naim.42140@gmail.com" target="_blank"
+                            class="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white py-2 px-4 rounded-full text-sm font-semibold inline-flex items-center">
+                            <i class="fas fa-envelope mr-1"></i> Contact Me
+                        </a>
+                    </div>
 
 
-            </div>
+                </div>
             </div>
 
 
@@ -233,7 +256,7 @@
                         <h4 class="mb-1.5 text-xl font-semibold">SSC</h4>
                         <p class="mb-3 text-slate-500 ">
                             Government Laboratory High School <br>
-                            
+
                         </p>
                     </div>
                 </li>
@@ -286,55 +309,55 @@
         </section>
 
         <!-- projects  -->
-        <section class="flex flex-col gap-10 my-10 p-5 items-center text-center bg-gradient-to-b from-blue-50 via-blue-100 to-zinc-300 shadow-md">
-            <div >
+        <section
+            class="flex flex-col gap-10 my-10 p-5 items-center text-center bg-gradient-to-b from-blue-50 via-blue-100 to-zinc-300 shadow-md">
+            <div>
                 <div class="flex text-center h-10 gap-1">
-                <img src="images/projects.png" alt="">
-                <h2 class="text-3xl font-extrabold mb-4 text-gray-800 dark:text-black">Projects</h2>
+                    <img src="images/projects.png" alt="">
+                    <h2 class="text-3xl font-extrabold mb-4 text-gray-800 dark:text-black">Projects</h2>
                 </div>
                 <p>Some of the projects I have done so far</p>
             </div>
             <div class="flex md:grid md:grid-cols-2 lg:flex flex-col md:flex-row gap-10">
-                <div
-                    class="block rounded-lg bg-zinc-50 shadow-lg shadow-zinc-700 ">
-                    <div class="h-56 relative rounded-t-lg overflow-hidden bg-[url('images/sellhobe.jpeg')] bg-cover bg-no-repeat bg-center" data-te-ripple-init
-                        data-te-ripple-color="light">
-                        <img class="rounded-t-lg" src=""
-                            alt="" />
-                        <a href="https://github.com/mostaquenaim/Classified-system-w-WebTech-Buy-sell-website-/" target="_blank">
-                                <div
+                <div class="block rounded-lg bg-zinc-50 shadow-lg shadow-zinc-700 ">
+                    <div class="h-56 relative rounded-t-lg overflow-hidden bg-[url('images/sellhobe.jpeg')] bg-cover bg-no-repeat bg-center"
+                        data-te-ripple-init data-te-ripple-color="light">
+                        <img class="rounded-t-lg" src="" alt="" />
+                        <a href="https://github.com/mostaquenaim/Classified-system-w-WebTech-Buy-sell-website-/"
+                            target="_blank">
+                            <div
                                 class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100">
                             </div>
                         </a>
                     </div>
                     <div class="bg-gradient-to-b from-zinc-50 via-slate-200 to-zinc-50 p-6 ">
-                        <h5 
-                        class="font-extrabold text-2xl gradient-text">
+                        <h5 class="font-extrabold text-2xl gradient-text">
                             Sellhobe.com
                         </h5>
                         <p class="mb-4 text-base text-neutral-400">
-                            <span class="font-semibold text-zinc-700">  This project was done with PHP, MySQL, HTML and CSS.</span> <br>
-                             The purpose of this project was to make buy, sell, rent easier for people. This is a classified system project. There are four roles Admin, Manager, Buyer and Seller. 
+                            <span class="font-semibold text-zinc-700"> This project was done with PHP, MySQL, HTML and
+                                CSS.</span> <br>
+                            The purpose of this project was to make buy, sell, rent easier for people. This is a
+                            classified system project. There are four roles Admin, Manager, Buyer and Seller.
                         </p>
-                        <a href="https://github.com/mostaquenaim/Classified-system-w-WebTech-Buy-sell-website-/" target="_blank">
-                        <button type="button"
-                            class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs uppercase leading-normal text-black font-semibold transition duration-150 ease-in-out hover:bg-primary-600 focus:bg-primary-600 focus:outline-none focus:ring-0 active:bg-primary-700 shadow-sm hover:shadow-lg shadow-gray-500"
-                            data-te-ripple-init data-te-ripple-color="light">
-                            <span class="flex gap-2 items-center">
-                                <i class="fa-brands fa-github"></i> 
-                                Check out
-                            </span>
-                            
-                        </button>
+                        <a href="https://github.com/mostaquenaim/Classified-system-w-WebTech-Buy-sell-website-/"
+                            target="_blank">
+                            <button type="button"
+                                class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs uppercase leading-normal text-black font-semibold transition duration-150 ease-in-out hover:bg-primary-600 focus:bg-primary-600 focus:outline-none focus:ring-0 active:bg-primary-700 shadow-sm hover:shadow-lg shadow-gray-500"
+                                data-te-ripple-init data-te-ripple-color="light">
+                                <span class="flex gap-2 items-center">
+                                    <i class="fa-brands fa-github"></i>
+                                    Check out
+                                </span>
+
+                            </button>
                         </a>
                     </div>
                 </div>
-                <div
-                    class="block rounded-lg bg-zinc-100 shadow-lg shadow-zinc-700 ">
-                    <div class="h-56 relative rounded-t-lg overflow-hidden bg-[url('images/cryptobg.jpg')] bg-cover bg-no-repeat bg-center" data-te-ripple-init
-                        data-te-ripple-color="light">
-                        <img class="rounded-t-lg" src=""
-                            alt="" />
+                <div class="block rounded-lg bg-zinc-100 shadow-lg shadow-zinc-700 ">
+                    <div class="h-56 relative rounded-t-lg overflow-hidden bg-[url('images/cryptobg.jpg')] bg-cover bg-no-repeat bg-center"
+                        data-te-ripple-init data-te-ripple-color="light">
+                        <img class="rounded-t-lg" src="" alt="" />
                         <a href="https://digitalcurrencytrader.vercel.app/Admin" target="_blank">
                             <div
                                 class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100">
@@ -342,32 +365,31 @@
                         </a>
                     </div>
                     <div class="bg-gradient-to-b from-zinc-50 via-slate-200 to-zinc-50 p-6">
-                        <h5 
-                        class="font-extrabold text-2xl gradient-text">
+                        <h5 class="font-extrabold text-2xl gradient-text">
                             Digital Currency Trader
                         </h5>
                         <p class="mb-4 text-base text-neutral-400">
-                            <span class="font-semibold text-zinc-700">  This project was done with NestJS, NestJS, HTML, Tailwind CSS, React and PostGreSQL.</span> <br>
-                             The purpose of this project was to make cryptocurrency buy/ sell/ transfer easier. Also, it lets people know more and keep updated with the cryptocurrency related news.
+                            <span class="font-semibold text-zinc-700"> This project was done with NestJS, NestJS, HTML,
+                                Tailwind CSS, React and PostGreSQL.</span> <br>
+                            The purpose of this project was to make cryptocurrency buy/ sell/ transfer easier. Also, it
+                            lets people know more and keep updated with the cryptocurrency related news.
                         </p>
                         <a href="https://github.com/mostaquenaim/digitalcurrencytrader.git" target="_blank">
-                        <button type="button"
-                            class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs uppercase leading-normal text-black font-semibold transition duration-150 ease-in-out hover:bg-primary-600 focus:bg-primary-600 focus:outline-none focus:ring-0 active:bg-primary-700 shadow-sm hover:shadow-lg shadow-gray-500"
-                            data-te-ripple-init data-te-ripple-color="light">
-                               <span class="flex gap-2 items-center">
-                                <i class="fa-brands fa-github"></i> 
-                                Check out 
-                            </span>                             
-                        </button>
+                            <button type="button"
+                                class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs uppercase leading-normal text-black font-semibold transition duration-150 ease-in-out hover:bg-primary-600 focus:bg-primary-600 focus:outline-none focus:ring-0 active:bg-primary-700 shadow-sm hover:shadow-lg shadow-gray-500"
+                                data-te-ripple-init data-te-ripple-color="light">
+                                <span class="flex gap-2 items-center">
+                                    <i class="fa-brands fa-github"></i>
+                                    Check out
+                                </span>
+                            </button>
                         </a>
                     </div>
                 </div>
-                <div
-                    class="block rounded-lg bg-zinc-100 shadow-lg shadow-zinc-700 ">
-                    <div class="h-56 relative rounded-t-lg overflow-hidden bg-[url('images/uthunBus.png')] bg-cover bg-no-repeat bg-center" data-te-ripple-init
-                        data-te-ripple-color="light">
-                        <img class="rounded-t-lg" src=""
-                            alt="" />
+                <div class="block rounded-lg bg-zinc-100 shadow-lg shadow-zinc-700 ">
+                    <div class="h-56 relative rounded-t-lg overflow-hidden bg-[url('images/uthunBus.png')] bg-cover bg-no-repeat bg-center"
+                        data-te-ripple-init data-te-ripple-color="light">
+                        <img class="rounded-t-lg" src="" alt="" />
                         <a href="https://github.com/mostaquenaim/Bus-ticket-reservation-system-w-c-/" target="_blank">
                             <div
                                 class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100">
@@ -375,32 +397,32 @@
                         </a>
                     </div>
                     <div class="bg-gradient-to-b from-zinc-50 via-slate-200 to-zinc-50 p-6">
-                        <h5 
-                        class="font-extrabold text-2xl gradient-text">
+                        <h5 class="font-extrabold text-2xl gradient-text">
                             Uthun - Bus Ticket Reservation system
                         </h5>
                         <p class="mb-4 text-base text-neutral-400">
-                            <span class="font-semibold text-zinc-700">  This project was done with C# & microsoft sql, Java (console) and C++(console) separately </span> <br>
-                             The purpose of this project was to make buying tickets for bus easy. People can also cancel reservation and pay for tickets online. Companies can add their bus. There are a few roles - Customer, Company, Admin, Manager and Employee.
+                            <span class="font-semibold text-zinc-700"> This project was done with C# & microsoft sql,
+                                Java (console) and C++(console) separately </span> <br>
+                            The purpose of this project was to make buying tickets for bus easy. People can also cancel
+                            reservation and pay for tickets online. Companies can add their bus. There are a few roles -
+                            Customer, Company, Admin, Manager and Employee.
                         </p>
                         <a href="https://github.com/mostaquenaim/BusTicketReservation-system-OOP-Java-" target="_blank">
-                        <button type="button"
-                            class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs uppercase leading-normal text-black font-semibold transition duration-150 ease-in-out hover:bg-primary-600 focus:bg-primary-600 focus:outline-none focus:ring-0 active:bg-primary-700 shadow-sm hover:shadow-lg shadow-gray-500"
-                            data-te-ripple-init data-te-ripple-color="light">
-                               <span class="flex gap-2 items-center">
-                                <i class="fa-brands fa-github"></i> 
-                                Check out 
-                            </span> 
-                        </button>
+                            <button type="button"
+                                class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs uppercase leading-normal text-black font-semibold transition duration-150 ease-in-out hover:bg-primary-600 focus:bg-primary-600 focus:outline-none focus:ring-0 active:bg-primary-700 shadow-sm hover:shadow-lg shadow-gray-500"
+                                data-te-ripple-init data-te-ripple-color="light">
+                                <span class="flex gap-2 items-center">
+                                    <i class="fa-brands fa-github"></i>
+                                    Check out
+                                </span>
+                            </button>
                         </a>
                     </div>
                 </div>
-                <div
-                    class="block rounded-lg bg-zinc-100 shadow-lg shadow-zinc-700 ">
-                    <div class="h-56 relative rounded-t-lg overflow-hidden bg-[url('images/farmerstech.jpg')] bg-cover bg-no-repeat bg-center" data-te-ripple-init
-                        data-te-ripple-color="light">
-                        <img class="rounded-t-lg" src=""
-                            alt="" />
+                <div class="block rounded-lg bg-zinc-100 shadow-lg shadow-zinc-700 ">
+                    <div class="h-56 relative rounded-t-lg overflow-hidden bg-[url('images/farmerstech.jpg')] bg-cover bg-no-repeat bg-center"
+                        data-te-ripple-init data-te-ripple-color="light">
+                        <img class="rounded-t-lg" src="" alt="" />
                         <a href="https://github.com/mostaquenaim/Facilitating-Farmer-frontend-" target="_blank">
                             <div
                                 class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100">
@@ -408,29 +430,32 @@
                         </a>
                     </div>
                     <div class="bg-gradient-to-b from-zinc-50 via-slate-200 to-zinc-50 p-6">
-                        <h5 
-                        class="font-extrabold text-2xl gradient-text">
-                            Facilitating Farmers 
+                        <h5 class="font-extrabold text-2xl gradient-text">
+                            Facilitating Farmers
                         </h5>
                         <p class="mb-4 text-base text-neutral-400">
-                            <span class="font-semibold text-zinc-700">  This project was done with .Net framework, microsoft SQL and React.</span> <br>
-                             The purpose of this project was to make farming related things more available to farmers. Here, farmers are able to buy/sell/rent products, know necessary info, consult with experts, join live, chat with experts etc. Customers, company, experts, admin, manager are some of the roles of this project.
+                            <span class="font-semibold text-zinc-700"> This project was done with .Net framework,
+                                microsoft SQL and React.</span> <br>
+                            The purpose of this project was to make farming related things more available to farmers.
+                            Here, farmers are able to buy/sell/rent products, know necessary info, consult with experts,
+                            join live, chat with experts etc. Customers, company, experts, admin, manager are some of
+                            the roles of this project.
                         </p>
                         <a href="https://github.com/mostaquenaim/Facilitating-Farmer-frontend-" target="_blank">
-                        <button type="button"
-                            class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs uppercase leading-normal text-black font-semibold transition duration-150 ease-in-out hover:bg-primary-600 focus:bg-primary-600 focus:outline-none focus:ring-0 active:bg-primary-700 shadow-sm hover:shadow-lg shadow-gray-500"
-                            data-te-ripple-init data-te-ripple-color="light">
-                               <span class="flex gap-2 items-center">
-                                <i class="fa-brands fa-github"></i> 
-                                Check out 
-                            </span> 
-                            
-                        </button></a>
+                            <button type="button"
+                                class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs uppercase leading-normal text-black font-semibold transition duration-150 ease-in-out hover:bg-primary-600 focus:bg-primary-600 focus:outline-none focus:ring-0 active:bg-primary-700 shadow-sm hover:shadow-lg shadow-gray-500"
+                                data-te-ripple-init data-te-ripple-color="light">
+                                <span class="flex gap-2 items-center">
+                                    <i class="fa-brands fa-github"></i>
+                                    Check out
+                                </span>
+
+                            </button></a>
                     </div>
                 </div>
-                
-                
-                
+
+
+
             </div>
             <div class="my-6">
                 <a href="projects.html"
@@ -442,163 +467,191 @@
         </section>
 
         <!-- skills  -->
-        <section class="text-gray-600 body-font my-10 bg-gradient-to-b from-gray-100 via-blue-100 to-zinc-300 shadow-md">
+        <section
+            class="text-gray-600 body-font my-10 bg-gradient-to-b from-gray-100 via-blue-100 to-zinc-300 shadow-md">
             <div class="container text-center px-5 py-24 mx-auto">
-              <div class="flex flex-col text-center w-full mb-20">
-                <div class="flex gap-2 text-center justify-center">
-                    <img src="images/icons8-skills-50.png" alt="">
-                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
-                    Skills
-                </h1></div>
-                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">These are some of my skills and expertise:</p>
-              </div>
-              <div class="flex flex-wrap -m-2">
-                <!-- Skill Item: Problem Solving -->
-                <div class="p-2 lg:w-1/4 md:w-1/2 w-full">
-                  <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg gap-2 group hover:bg-indigo-50 transition-colors duration-300">
-                    <img src="images/icons8-critical-thinking-64.png" alt="">
-                    <div class="flex-grow">
-                      <h2 class="text-gray-900 title-font font-medium">Problem Solving</h2>
-                      <p class="text-gray-500">I have been in competitive programming for 2 years. Solved 300+ problems in <a href="https://codeforces.com/" class="text-blue-600 font-bold" ><span class="text-black">Code</span>Forces</a>  </p>
+                <div class="flex flex-col text-center w-full mb-20">
+                    <div class="flex gap-2 text-center justify-center">
+                        <img src="images/icons8-skills-50.png" alt="">
+                        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
+                            Skills
+                        </h1>
                     </div>
-                  </div>
+                    <p class="lg:w-2/3 mx-auto leading-relaxed text-base">These are some of my skills and expertise:</p>
                 </div>
-                <!-- programming languages  -->
-                <div class="p-2 lg:w-1/4 md:w-1/2 w-full">
-                  <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg gap-2 group hover:bg-indigo-50 transition-colors duration-300">
-                    <img src="images/icons8-coding-48.png" alt="">
-                    <div class="flex-grow">
-                      <h2 class="text-gray-900 title-font font-medium">Programming Languages</h2>
-                      <p class="text-gray-500">I have worked with a number of languages. C++, Javascript, Python, C#, Java are some of the mentionable ones</p>
+                <div class="flex flex-wrap -m-2">
+                    <!-- Skill Item: Problem Solving -->
+                    <div class="p-2 lg:w-1/4 md:w-1/2 w-full">
+                        <div
+                            class="h-full flex items-center border-gray-200 border p-4 rounded-lg gap-2 group hover:bg-indigo-50 transition-colors duration-300">
+                            <img src="images/icons8-critical-thinking-64.png" alt="">
+                            <div class="flex-grow">
+                                <h2 class="text-gray-900 title-font font-medium">Problem Solving</h2>
+                                <p class="text-gray-500">I have been in competitive programming for 2 years. Solved 300+
+                                    problems in <a href="https://codeforces.com/" class="text-blue-600 font-bold"><span
+                                            class="text-black">Code</span>Forces</a> </p>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-                <!-- web development  -->
-                <div class="p-2 lg:w-1/4 md:w-1/2 w-full">
-                  <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg gap-2 group hover:bg-indigo-50 transition-colors duration-300">
-                    <img src="images/icons8-web-development-48.png" alt="">
-                    <div class="flex-grow">
-                      <h2 class="text-gray-900 title-font font-medium">Web Development</h2>
-                      <p class="text-gray-500">HTML, CSS, Tailwind, PHP, NextJS, NestJS, .Net, Javascript, Typescript</p>
+                    <!-- programming languages  -->
+                    <div class="p-2 lg:w-1/4 md:w-1/2 w-full">
+                        <div
+                            class="h-full flex items-center border-gray-200 border p-4 rounded-lg gap-2 group hover:bg-indigo-50 transition-colors duration-300">
+                            <img src="images/icons8-coding-48.png" alt="">
+                            <div class="flex-grow">
+                                <h2 class="text-gray-900 title-font font-medium">Programming Languages</h2>
+                                <p class="text-gray-500">I have worked with a number of languages. C++, Javascript,
+                                    Python, C#, Java are some of the mentionable ones</p>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-                <!-- software development  -->
-                <div class="p-2 lg:w-1/4 md:w-1/2 w-full">
-                  <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg gap-2 group hover:bg-indigo-50 transition-colors duration-300">
-                    <img src="images/icons8-software-development-48.png" alt="">
-                    <div class="flex-grow">
-                      <h2 class="text-gray-900 title-font font-medium">Software Development</h2>
-                      <p class="text-gray-500">Familiar with software developing methods (Agile, Scrum, SDLC etc)</p>
+                    <!-- web development  -->
+                    <div class="p-2 lg:w-1/4 md:w-1/2 w-full">
+                        <div
+                            class="h-full flex items-center border-gray-200 border p-4 rounded-lg gap-2 group hover:bg-indigo-50 transition-colors duration-300">
+                            <img src="images/icons8-web-development-48.png" alt="">
+                            <div class="flex-grow">
+                                <h2 class="text-gray-900 title-font font-medium">Web Development</h2>
+                                <p class="text-gray-500">HTML, CSS, Tailwind, PHP, NextJS, NestJS, .Net, Javascript,
+                                    Typescript</p>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-                <!-- Project Management  -->
-                <div class="p-2 lg:w-1/4 md:w-1/2 w-full">
-                  <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg gap-2 group hover:bg-indigo-50 transition-colors duration-300">
-                    <img src="images/icons8-project-management-48.png" alt="">
-                    <div class="flex-grow">
-                      <h2 class="text-gray-900 title-font font-medium">Project Management</h2>
-                      <p class="text-gray-500">Worked with Trello, Asana, Slack etc.</p>
+                    <!-- software development  -->
+                    <div class="p-2 lg:w-1/4 md:w-1/2 w-full">
+                        <div
+                            class="h-full flex items-center border-gray-200 border p-4 rounded-lg gap-2 group hover:bg-indigo-50 transition-colors duration-300">
+                            <img src="images/icons8-software-development-48.png" alt="">
+                            <div class="flex-grow">
+                                <h2 class="text-gray-900 title-font font-medium">Software Development</h2>
+                                <p class="text-gray-500">Familiar with software developing methods (Agile, Scrum, SDLC
+                                    etc)</p>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-                <!-- algorithm and data structure  -->
-                <div class="p-2 lg:w-1/4 md:w-1/2 w-full">
-                  <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg gap-2 group hover:bg-indigo-50 transition-colors duration-300">
-                    <img src="images/icons8-algorithm-48.png" alt="">
-                    <div class="flex-grow">
-                      <h2 class="text-gray-900 title-font font-medium">Algorithm and Data Structure</h2>
-                      <p class="text-gray-500">As, I am a regular problem solver at Codeforces, I have deep knowledge about algorithms and data structure </p>
+                    <!-- Project Management  -->
+                    <div class="p-2 lg:w-1/4 md:w-1/2 w-full">
+                        <div
+                            class="h-full flex items-center border-gray-200 border p-4 rounded-lg gap-2 group hover:bg-indigo-50 transition-colors duration-300">
+                            <img src="images/icons8-project-management-48.png" alt="">
+                            <div class="flex-grow">
+                                <h2 class="text-gray-900 title-font font-medium">Project Management</h2>
+                                <p class="text-gray-500">Worked with Trello, Asana, Slack etc.</p>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-                <!-- database management  -->
-                <div class="p-2 lg:w-1/4 md:w-1/2 w-full">
-                  <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg gap-2 group hover:bg-indigo-50 transition-colors duration-300">
-                    <img src="images/icons8-database-administrator-48.png" alt="">
-                    <div class="flex-grow">
-                      <h2 class="text-gray-900 title-font font-medium">Database Management</h2>
-                      <p class="text-gray-500">MySql, Microsoft SQL, PostgreSQL</p>
+                    <!-- algorithm and data structure  -->
+                    <div class="p-2 lg:w-1/4 md:w-1/2 w-full">
+                        <div
+                            class="h-full flex items-center border-gray-200 border p-4 rounded-lg gap-2 group hover:bg-indigo-50 transition-colors duration-300">
+                            <img src="images/icons8-algorithm-48.png" alt="">
+                            <div class="flex-grow">
+                                <h2 class="text-gray-900 title-font font-medium">Algorithm and Data Structure</h2>
+                                <p class="text-gray-500">As, I am a regular problem solver at Codeforces, I have deep
+                                    knowledge about algorithms and data structure </p>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-                <!-- soft skills  -->
-                <div class="p-2 lg:w-1/4 md:w-1/2 w-full">
-                  <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg gap-2 group hover:bg-indigo-50 transition-colors duration-300">
-                    <img src="images/icons8-corporate-48.png" alt="">
-                    <div class="flex-grow">
-                      <h2 class="text-gray-900 title-font font-medium">Soft Skills</h2>
-                      <p class="text-gray-500">Team work, Communication, Leadership, Active Listening</p>
+                    <!-- database management  -->
+                    <div class="p-2 lg:w-1/4 md:w-1/2 w-full">
+                        <div
+                            class="h-full flex items-center border-gray-200 border p-4 rounded-lg gap-2 group hover:bg-indigo-50 transition-colors duration-300">
+                            <img src="images/icons8-database-administrator-48.png" alt="">
+                            <div class="flex-grow">
+                                <h2 class="text-gray-900 title-font font-medium">Database Management</h2>
+                                <p class="text-gray-500">MySql, Microsoft SQL, PostgreSQL</p>
+                            </div>
+                        </div>
                     </div>
-                  </div>
+                    <!-- soft skills  -->
+                    <div class="p-2 lg:w-1/4 md:w-1/2 w-full">
+                        <div
+                            class="h-full flex items-center border-gray-200 border p-4 rounded-lg gap-2 group hover:bg-indigo-50 transition-colors duration-300">
+                            <img src="images/icons8-corporate-48.png" alt="">
+                            <div class="flex-grow">
+                                <h2 class="text-gray-900 title-font font-medium">Soft Skills</h2>
+                                <p class="text-gray-500">Team work, Communication, Leadership, Active Listening</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Repeat for other skills -->
                 </div>
-                <!-- Repeat for other skills -->
-              </div>
-              <div class="my-6">
-                <a href="about.html#skills"
-                    class="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-2 px-4 rounded-full text-sm font-semibold inline-flex items-center hover:from-blue-600 hover:to-purple-700">
-                    <span class="mr-2">Learn more</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
+                <div class="my-6">
+                    <a href="about.html#skills"
+                        class="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-2 px-4 rounded-full text-sm font-semibold inline-flex items-center hover:from-blue-600 hover:to-purple-700">
+                        <span class="mr-2">Learn more</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
             </div>
-              
-            </div>
-          </section>
+        </section>
 
         <!-- achievements  -->
-        <section class="flex flex-col items-center text-center justify-center gap-7 bg-gradient-to-b from-gray-100 via-violet-200 to-zinc-200">
+        <section
+            class="flex flex-col items-center text-center justify-center gap-7 bg-gradient-to-b from-gray-100 via-violet-200 to-zinc-200">
             <div class="flex flex-col text-center items-center ">
                 <div class="flex text-center h-10 gap-1">
-                <img src="images/icons8-trophy-48.png" alt="">
-                <h2 class="text-3xl font-extrabold mb-4 text-gray-800 dark:text-black">Achievements</h2>
+                    <img src="images/icons8-trophy-48.png" alt="">
+                    <h2 class="text-3xl font-extrabold mb-4 text-gray-800 dark:text-black">Achievements</h2>
                 </div>
-                <p>I have not achieved a lot of things in my life. But here are some of the few achievements I have so far.</p>
+                <p>I have not achieved a lot of things in my life. But here are some of the few achievements I have so
+                    far.</p>
             </div>
             <div class="flex flex-col md:flex-row gap-10">
-            <div class="relative card w-96 bg-base-100 shadow-xl z-10">
-                <figure class="h-72 group cursor-pointer"><img class="group-hover:opacity-50 transition-opacity duration-300"  src="images/deanAward.jpg" alt="Dean's Award" />
-                
-                <img class="hidden lg:block absolute h-1/3 opacity-0 top-1/2 left-1/5  group-hover:opacity-100 transition delay-700 duration-1000 ease-in shadow-lg shadow-black rounded-3xl" src="images/deanAward.jpg" alt="Dean's Award" />
-                <img class="hidden lg:block absolute h-1/3 opacity-0 -top-1/3 -left-14  group-hover:opacity-100 transition delay-150 duration-1000 ease-in shadow-lg shadow-black rounded-3xl" src="images/deanAward.jpg" alt="Dean's Award" />
-                <img class="hidden lg:block absolute h-1/3 opacity-0 -top-1/3 -right-14  group-hover:opacity-100 transition delay-300 duration-1000 ease-in shadow-lg shadow-black rounded-3xl" src="images/deanAward.jpg" alt="Dean's Award" />
-                <img class="hidden lg:block absolute h-1/3 opacity-0 -left-48  group-hover:opacity-100 transition duration-1000 delay-500 ease-in shadow-lg shadow-black rounded-3xl" src="images/deanAward.jpg" alt="Dean's Award" />
-                <img class="hidden lg:block absolute h-1/3 opacity-0 -right-48  group-hover:opacity-100 transition duration-1000  ease-in shadow-lg shadow-black rounded-3xl" src="images/deanAward.jpg" alt="Dean's Award" />
-            </figure>
-                <div class="card-body flex flex-col items-center text-center justify-center">
-                  <h2 class="card-title">
-                    Dean's Award X 5
-                  </h2>
-                  <p>Dean's Award is given 2 times a year to them who take 15+ credits and achieve 3.75+ CGPA without B or less grade in a course</p>
-                  <div class="card-actions justify-center">
-                    <div class="badge badge-outline">Fall 2020-21</div> 
-                    <div class="badge badge-outline">Spring 2020-21</div> 
-                    <div class="badge badge-outline">Fall 2021-22</div> 
-                    <div class="badge badge-outline">Spring 2021-22</div> 
-                    <div class="badge badge-outline">Fall 2022-23</div> 
-                  </div>
-                </div>
-              </div>
+                <div class="relative card w-96 bg-base-100 shadow-xl z-10">
+                    <figure class="h-72 group cursor-pointer"><img
+                            class="group-hover:opacity-50 transition-opacity duration-300" src="images/deanAward.jpg"
+                            alt="Dean's Award" />
 
-              <div class="relative card w-96 bg-base-100 shadow-xl z-0">
-                <figure class="h-72 group cursor-pointer"><img src="images/hackathon.jpg" alt="Dean's Award" />
-                </figure>
-                <div class="card-body flex flex-col items-center text-center justify-center">
-                  <h2 class="card-title">
-                    2nd Round - CTO Forum Hack-a-Thon
-                  </h2>
-                  <p>
-                    CTO forum Innovation Hackathon aims to connect talented youth tech professionals, students, entrepreneurs, leaders, and innovators with the top industry professionals in the rising fields of new technologies
-                </p>
-                  <div class="card-actions justify-center">
-                    <div class="badge badge-outline">2022</div> 
-                  </div>
+                        <img class="hidden lg:block absolute h-1/3 opacity-0 top-1/2 left-1/5  group-hover:opacity-100 transition delay-700 duration-1000 ease-in shadow-lg shadow-black rounded-3xl"
+                            src="images/deanAward.jpg" alt="Dean's Award" />
+                        <img class="hidden lg:block absolute h-1/3 opacity-0 -top-1/3 -left-14  group-hover:opacity-100 transition delay-150 duration-1000 ease-in shadow-lg shadow-black rounded-3xl"
+                            src="images/deanAward.jpg" alt="Dean's Award" />
+                        <img class="hidden lg:block absolute h-1/3 opacity-0 -top-1/3 -right-14  group-hover:opacity-100 transition delay-300 duration-1000 ease-in shadow-lg shadow-black rounded-3xl"
+                            src="images/deanAward.jpg" alt="Dean's Award" />
+                        <img class="hidden lg:block absolute h-1/3 opacity-0 -left-48  group-hover:opacity-100 transition duration-1000 delay-500 ease-in shadow-lg shadow-black rounded-3xl"
+                            src="images/deanAward.jpg" alt="Dean's Award" />
+                        <img class="hidden lg:block absolute h-1/3 opacity-0 -right-48  group-hover:opacity-100 transition duration-1000  ease-in shadow-lg shadow-black rounded-3xl"
+                            src="images/deanAward.jpg" alt="Dean's Award" />
+                    </figure>
+                    <div class="card-body flex flex-col items-center text-center justify-center">
+                        <h2 class="card-title">
+                            Dean's Award X 5
+                        </h2>
+                        <p>Dean's Award is given 2 times a year to them who take 15+ credits and achieve 3.75+ CGPA
+                            without B or less grade in a course</p>
+                        <div class="card-actions justify-center">
+                            <div class="badge badge-outline">Fall 2020-21</div>
+                            <div class="badge badge-outline">Spring 2020-21</div>
+                            <div class="badge badge-outline">Fall 2021-22</div>
+                            <div class="badge badge-outline">Spring 2021-22</div>
+                            <div class="badge badge-outline">Fall 2022-23</div>
+                        </div>
+                    </div>
                 </div>
-              </div>
+
+                <div class="relative card w-96 bg-base-100 shadow-xl z-0">
+                    <figure class="h-72 group cursor-pointer"><img src="images/hackathon.jpg" alt="Dean's Award" />
+                    </figure>
+                    <div class="card-body flex flex-col items-center text-center justify-center">
+                        <h2 class="card-title">
+                            2nd Round - CTO Forum Hack-a-Thon
+                        </h2>
+                        <p>
+                            CTO forum Innovation Hackathon aims to connect talented youth tech professionals, students,
+                            entrepreneurs, leaders, and innovators with the top industry professionals in the rising
+                            fields of new technologies
+                        </p>
+                        <div class="card-actions justify-center">
+                            <div class="badge badge-outline">2022</div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
 
-              <div class="my-6">
+            <div class="my-6">
                 <a href="achievements.html"
                     class="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-2 px-4 rounded-full text-sm font-semibold inline-flex items-center hover:from-blue-600 hover:to-purple-700">
                     <span class="mr-2">More achievements</span>
